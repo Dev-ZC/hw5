@@ -54,7 +54,6 @@ void allCombinations(
             //index = 0;
             //currWord.resize(in.length());
             //currWord.assign(in.length(), ' ');
-            cout << "-"<< currWord << "- We inserted this word!!!!" << endl;
             allCombos.insert(currWord);
         }
         return;
@@ -64,8 +63,6 @@ void allCombinations(
 
     if (in[index] != '-'){ // Skip if a fixed letter exists
         currWord[index] = in[index];
-        cout << index << endl;
-        cout << "-"<< currWord << "-" << endl;
         allCombinations(in, floating, allCombos, index+1, currWord, dict);
         //cout << "2" << endl;
     } else {
